@@ -13,10 +13,11 @@ in lunch time
 ####################################### Basic settings #########################################
 SET_TIME = '11:50'
 SET_TIME_DIV = 'AM'
-set_date = date.strftime(date.today(), "%m/%d/%Y")                  # today in format mm/dd/yyyy
+set_date = date.strftime(date.today(), "%m/%d/%Y")             # today in format mm/dd/yyyy
 USERNAME = ''
 PASSWORD = ""
 NOTE = f'Automatic System - Forgot to clock out for Lunch - Administrator - {set_date}'
+list_of_names = send_names()                                  # import data from get_names.py
 ################################################################################################
 
 browser = webdriver.Firefox()
@@ -88,8 +89,6 @@ if __name__ == "__main__":
 
     login_page()
     select_employees_website()
-    names = send_names()
-    list_of_names = names                     # import data from get_names.py
     select_names_flow(names=list_of_names)    # this accept a list of names to be change.
 
     #  this created a log in a text file
@@ -104,6 +103,6 @@ if __name__ == "__main__":
                 file_log.write(name)
 
     finally:
-        (print(x) for x in names)       
+        (print(x) for x in list_of_names)       
         print('everything was change successfully ')
         browser.close()
