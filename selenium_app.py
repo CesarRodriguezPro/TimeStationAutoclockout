@@ -14,8 +14,8 @@ in lunch time
 SET_TIME = '11:50'
 SET_TIME_DIV = 'AM'
 set_date = date.strftime(date.today(), "%m/%d/%Y")             # today in format mm/dd/yyyy
-USERNAME = ''
-PASSWORD = ""
+USERNAME = 'yd@ibkconstructiongroup.com'
+PASSWORD = "lore718ibk."
 NOTE = f'Automatic System - Forgot to clock out for Lunch - Administrator - {set_date}'
 list_of_names = send_names()                                  # import data from get_names.py
 ################################################################################################
@@ -96,14 +96,17 @@ if __name__ == "__main__":
         with open('NameChangeLog.txt', 'w') as file_log:
             for name in list_of_names:
                 file_log.write(f'{set_date} -- {name}\n')
+                print(name)
 
     except:
         with open('NameChangeLog.txt', 'a') as file_log:
             for name in list_of_names:
                 file_log.write(f'{set_date} -- {name}\n')
+                print(name)
+
 
     finally:
-        (print(x) for x in list_of_names)       
+
         print('everything was change successfully ')
         browser.close()
 ##########################################################################

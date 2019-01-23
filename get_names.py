@@ -8,12 +8,13 @@ white_list_Employees = ["Rodriguez, Cesar",
                         "Sikk, Liliana",
                         'CUMBE, JUAN',
                         'STANKER, ANTHONY',
-                        'VOYTYUK, TARAS']
+                        'VOYTYUK, TARAS',
+                        'TOWER CRANE']
 
 white_list_Department = ['RCS', 'Office']
 
 
-TIME = '12:10'
+TIME = '12:13'
 TIME_LIMIT = '00 :40:00'
 CODE = 34
 
