@@ -91,18 +91,19 @@ if __name__ == "__main__":
     select_employees_website()
     select_names_flow(names=list_of_names)    # this accept a list of names to be change.
 
-    #  this created a log in a text file
+    ########  this created a log in a text file ########################
     try:
         with open('NameChangeLog.txt', 'w') as file_log:
             for name in list_of_names:
-                file_log.write(name)
+                file_log.write(f'{set_date} -- {name}\n')
 
     except:
         with open('NameChangeLog.txt', 'a') as file_log:
             for name in list_of_names:
-                file_log.write(name)
+                file_log.write(f'{set_date} -- {name}\n')
 
     finally:
         (print(x) for x in list_of_names)       
         print('everything was change successfully ')
         browser.close()
+##########################################################################

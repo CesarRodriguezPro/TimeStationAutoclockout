@@ -13,7 +13,7 @@ white_list_Employees = ["Rodriguez, Cesar",
 white_list_Department = ['RCS', 'Office']
 
 
-TIME = '12:13'
+TIME = '12:10'
 TIME_LIMIT = '00 :40:00'
 CODE = 34
 
