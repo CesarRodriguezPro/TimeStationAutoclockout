@@ -8,14 +8,12 @@ this app automatic login in to a website and cut the hours of the people who for
 in lunch time
 '''
 
-# list_for_test = ['test employee 1', "test employee 2"]
-
 ####################################### Basic settings #########################################
 SET_TIME = '11:50'
 SET_TIME_DIV = 'AM'
 set_date = date.strftime(date.today(), "%m/%d/%Y")             # today in format mm/dd/yyyy
-USERNAME = 'yd@ibkconstructiongroup.com'
-PASSWORD = "lore718ibk."
+USERNAME = ''
+PASSWORD = ""
 NOTE = f'Automatic System - Forgot to clock out for Lunch - Administrator - {set_date}'
 list_of_names = send_names()                                  # import data from get_names.py
 ################################################################################################
@@ -91,7 +89,7 @@ if __name__ == "__main__":
     select_employees_website()
     select_names_flow(names=list_of_names)    # this accept a list of names to be change.
 
-    ########  this created a log in a text file ########################
+    ##########  this created a log in a text file ########################
     try:
         with open('NameChangeLog.txt', 'w') as file_log:
             for name in list_of_names:
@@ -104,9 +102,7 @@ if __name__ == "__main__":
                 file_log.write(f'{set_date} -- {name}\n')
                 print(name)
 
-
     finally:
-
         print('everything was change successfully ')
         browser.close()
 ##########################################################################

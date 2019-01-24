@@ -47,7 +47,6 @@ def result_noon():
 
 
 def white_list_filter():
-
     data_raw = result_noon()
     data = data_raw.to_dict('index')
     no_department_list = [i for i in data.values() if i["Department"] not in white_list_Department]
@@ -57,15 +56,14 @@ def white_list_filter():
 def send_names():
 
     x = []
-    items = white_list_filter()
-    for i in items:
+    for i in white_list_filter():
         x.append(i['Name'])
     return x
 
 
 def local_display():
-    items = white_list_filter()
-    for i in items:
+
+    for i in white_list_filter():
        print(f"{i['Name']:30}  {i['Department']:30}  {i['Time']}")
     input('')
 
